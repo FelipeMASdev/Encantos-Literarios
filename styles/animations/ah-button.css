@@ -1,0 +1,36 @@
+.ah-button{
+  position: relative;
+  
+  & span{
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: var(--pink-base); ;
+
+    transform: scale(0);
+    border-radius: 50%;
+    
+    transition: 
+      transform .3s ease-in, 
+      border-radius .4s ease-in;
+  }
+}
+
+.ah-button:hover{
+  &::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+
+    transform: scale(1);
+    border-radius: .5rem;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+.button-primary{
+  padding-inline: 1.25rem;
+  padding-block: .75rem;
+  border-radius: .5rem;
+  background-color: var(--pink-dark);
+
+  font: var(--font-button);
+  color: var(--text-title);
+}

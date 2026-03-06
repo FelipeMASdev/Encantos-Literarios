@@ -2,29 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 :root{
   /* typography variables */
     --font-family-base: 'Raleway', sans-serif;
-    --font-title-lg: 700 48px/normal var(--font-family-base);
-    --font-title-md: 700 40px/normal var(--font-family-base);
-    --font-title-sm: 700 32px/normal var(--font-family-base);
-    --font-title-xs: 700 16px/normal var(--font-family-base);
-    --font-subtitle: 500 32px/200% var(--font-family-base);
+    --font-title-lg: 700 3rem/normal var(--font-family-base);
+    --font-title-md: 700 2.5rem/normal var(--font-family-base);
+    --font-title-sm: 700 2rem/normal var(--font-family-base);
+    --font-title-xs: 700 1rem/normal var(--font-family-base);
+    --font-subtitle: 500 2rem/200% var(--font-family-base);
 
-    --font-body-lg-regular: 400 20px/140% var(--font-family-base);
-    --font-body-lg-bold: 700 20px/140% var(--font-family-base);
-    --font-body-md-regular: 400 16px/140% var(--font-family-base);
-    --font-body-md-bold: 700 16px/140% var(--font-family-base);
-    --font-body-sm-regular: 400 14px/140% var(--font-family-base);
-    --font-body-sm-bold: 700 14px/140% var(--font-family-base);
-    --font-body-xs-regular: 400 12px/140% var(--font-family-base);
-    --font-body-xs-bold: 700 12px/140% var(--font-family-base);
+    --font-body-lg-regular: 400 1.25rem/140% var(--font-family-base);
+    --font-body-lg-bold: 700 1.25rem/140% var(--font-family-base);
+    --font-body-md-regular: 400 1rem/140% var(--font-family-base);
+    --font-body-md-bold: 700 1rem/140% var(--font-family-base);
+    --font-body-sm-regular: 400 0.875rem/140% var(--font-family-base);
+    --font-body-sm-bold: 700 0.875rem/140% var(--font-family-base);
+    --font-body-xs-regular: 400 0.75rem/140% var(--font-family-base);
+    --font-body-xs-bold: 700 0.75rem/140% var(--font-family-base);
 
-    --font-button: 700 14px/normal var(--font-family-base);
-    --font-link: 500 14px/normal var(--font-family-base);
-    --font-tag: 700 10px/normal var(--font-family-base); 
+    --font-button: 700 0.875rem/normal var(--font-family-base);
+    --font-link: 500 0.875rem/normal var(--font-family-base);
+    --font-tag: 700 0.625rem/normal var(--font-family-base); 
 
   /* color variables */
     --pink-light: #C59DD2;
@@ -54,4 +55,19 @@ html{
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0%;
+
+  background-color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  position: relative;
+  max-width: 90rem;
+  margin-inline: auto;
+  
+  background-color: var(--shape-background);
+  z-index: 0;
 }

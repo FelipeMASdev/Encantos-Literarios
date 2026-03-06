@@ -1,4 +1,4 @@
-Landing Page responsiva de um site desktop de clube de assinatura de livros
+Landing Page responsiva de um site de clube de assinatura de livros
 
 Desafios prático da formação FullStack da rocketseat, com foco em animações e transições feitas em css.
 
