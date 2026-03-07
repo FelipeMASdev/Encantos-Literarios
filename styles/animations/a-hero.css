@@ -1,0 +1,40 @@
+@property --fade-end {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+
+@property --fade-alpha {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.a-hero {
+
+  mask-image: linear-gradient(
+    to bottom, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,var(--fade-alpha)) var(--fade-end));
+  animation: aHero 1.7s .3s linear forwards;
+}
+
+@keyframes aHero {
+  
+  0% {
+    --fade-alpha:0;
+    --fade-end:25%;
+  }
+  50% {
+    --fade-alpha:0;
+    --fade-end:100%;
+  }
+  90%{
+    --fade-alpha:0.7;
+    --fade-end:100%;
+  }
+  100% {
+    --fade-alpha:1;
+    --fade-end:100%;
+  }
+}
