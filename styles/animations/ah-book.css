@@ -1,0 +1,51 @@
+  & .book-wrapper .book:hover {
+
+    & img:not([src*="book.png"]), & div {
+      scale: 1.0;
+    }
+
+    & img[src*="bookmark-purple"] {
+
+      transform: 
+        rotate(22deg)
+        translateX(115%)
+        translateY(-17%);
+    } 
+
+    & img[src*="bookmark-yellow"] {
+      
+      transform: 
+        rotate(12deg)
+        translateX(53%)
+        translateY(-25%);
+    }
+
+    & #arrow-3 {
+
+      transform: 
+        translateX(125%)
+        translateY(90%);
+    }
+
+    & img[src*="pin"] {
+      
+      transform: 
+        rotate(-8deg)
+        translateX(-88%)
+        translateY(24%);
+    }
+
+    & #arrow-2 {
+
+      transform: 
+        translateX(-255%)
+        translateY(-55%);
+    }
+
+    & #arrow-1 {
+
+      transform: 
+        translateX(-128%)
+        translateY(-265%);
+    }
+  }

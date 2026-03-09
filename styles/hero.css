@@ -15,7 +15,6 @@
     height: 100%;
     z-index: 1;
     opacity: 0.55;
-    overflow: hidden;
     pointer-events: none;
 
     & > img:nth-child(1){
@@ -23,6 +22,7 @@
       position: absolute;
       top: -20%;
       left: 45%;
+
     }
 
     & > img:nth-child(2){
@@ -30,14 +30,16 @@
       position: absolute;
       top: -20%;
       left: -45%;
+
     }
 
     & > img:nth-child(3){
       width: 100%;
       position: absolute;
-      top: 25%;
+      top: 5%;
       left: 0%;
-      transform: scale(2);
+
+      filter: blur(5px);
     }
   }
 
