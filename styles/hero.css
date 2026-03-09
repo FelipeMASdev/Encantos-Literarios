@@ -59,6 +59,17 @@
     max-width: 74rem;
     padding-inline: 2rem;
     padding-top: 3.5rem;
+    
+    & > img:nth-child(1){
+      width: 14.375rem;
+      height: auto;
+    }
+
+    & > img:nth-child(2){
+      width: 4rem;
+      height: auto;
+      display: none;
+    }
   }
 
   & .headline{
@@ -144,7 +155,60 @@
 }
 
 @media (width <= 768px) {
-  .hero-wrapper {
-    background-color: rgba(0, 238, 20, 0.05);
+
+  .hero-wrapper{
+
+    gap: 0;
+
+    & .hero{
+      gap: 3rem;
+      background-size: 180%;
+      height: 120vw;
+    }
+
+    & header{
+
+      padding-inline: 1.25rem;
+      padding-top: 1.25rem;
+      
+      & > img:nth-child(1) {
+        display: none;
+      }
+
+      & > img:nth-child(2) {
+        display: initial;
+      }
+    }
+
+    & .headline {
+      padding-inline: 1.25rem;
+    }
+
+    & .about{
+      min-height: initial;
+      padding-inline: 1.25rem;;
+      padding-block: 2rem;
+      margin-bottom: 5rem;
+
+      & img[src*="spellbook"]{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-inline: 65%;
+      }
+
+      & img[src*="ouija"]{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 0rem;
+
+      }
+
+      & img[src*="crystalball"]{
+        width: 2.5rem;
+        height: 2.5rem;
+
+      }
+    }
   }
+  
 }

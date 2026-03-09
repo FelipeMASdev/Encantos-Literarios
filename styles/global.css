@@ -71,3 +71,28 @@ a{
   background-color: var(--shape-background);
   z-index: 0;
 }
+
+@media (width <= 768px) {
+
+  :root{
+  /* typography variables */
+    --font-title-lg: 700 1.75rem/normal var(--font-family-base);
+    /* --font-title-md: 700 2.5rem/normal var(--font-family-base);
+    --font-title-sm: 700 2rem/normal var(--font-family-base);
+    --font-title-xs: 700 1rem/normal var(--font-family-base);*/
+    --font-subtitle: 500 1rem/200% var(--font-family-base);
+
+    --font-body-lg-regular: 400 .875rem/140% var(--font-family-base);
+    --font-body-lg-bold: 700 .875rem/140% var(--font-family-base);
+    /*--font-body-md-regular: 400 1rem/140% var(--font-family-base);
+    --font-body-md-bold: 700 1rem/140% var(--font-family-base);
+    --font-body-sm-regular: 400 0.875rem/140% var(--font-family-base);
+    --font-body-sm-bold: 700 0.875rem/140% var(--font-family-base);
+    --font-body-xs-regular: 400 0.75rem/140% var(--font-family-base);
+    --font-body-xs-bold: 700 0.75rem/140% var(--font-family-base);
+
+    --font-button: 700 0.875rem/normal var(--font-family-base);
+    --font-link: 500 0.875rem/normal var(--font-family-base);
+    --font-tag: 700 0.625rem/normal var(--font-family-base);  */
+  }
+}
