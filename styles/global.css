@@ -73,6 +73,14 @@ a{
   overflow: hidden;
 }
 
+.tag {
+  background-color: var(--shape-stroke);
+  padding-inline: 1.25rem;
+  padding-block: .5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
 @media (width <= 768px) {
 
   :root{

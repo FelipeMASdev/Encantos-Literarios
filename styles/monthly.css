@@ -5,8 +5,6 @@
 
   position: relative;
 
-  height:2000px; /*for testing*/
-
   & .blur {
     position: absolute;
     top: 0;
