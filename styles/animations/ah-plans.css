@@ -1,0 +1,214 @@
+/* split stacked cards on container hover */
+.cards-container {
+  & .card-wrapper:nth-of-type(1) {
+    
+    --transform-from:
+      translateX(100%)
+      translateY(0)
+      rotate(0deg);
+
+    --transform-to: 
+      translateY(12%)
+      rotate(-8deg);
+
+    animation: plansSplit 0.5s Ease-out both;
+    animation-play-state: paused;
+  }
+
+  & .card-wrapper:nth-of-type(3) { 
+    --transform-from:
+      translateX(-100%)
+      translateY(0)
+      rotate(0deg);
+
+    --transform-to: 
+      translateY(12%)
+      rotate(8deg);
+
+    animation: plansSplit 0.5s Ease-out both;
+    animation-play-state: paused;
+  }
+}
+.cards-container:hover { 
+
+  & .card-wrapper:nth-of-type(1) {
+    animation-play-state:running;
+  }
+
+  & .card-wrapper:nth-of-type(3) { 
+    animation-play-state: running;
+  }
+}
+
+@media (880px <=  width <= 1000px) {
+  .cards-container {
+    & .card-wrapper:nth-of-type(1) {
+      --transform-to:
+        translateX(20%)
+        translateY(12%)
+        rotate(-8deg);
+    }
+
+    & .card-wrapper:nth-of-type(3) {
+      --transform-to:
+        translateX(-20%)
+        translateY(12%)
+        rotate(8deg);
+    }
+  }
+}
+
+@media (768px <=  width <= 880px) {
+  .cards-container {
+    & .card-wrapper:nth-of-type(1) {
+      --transform-to:
+        translateX(40%)
+        translateY(12%)
+        rotate(-8deg);
+    }
+
+    & .card-wrapper:nth-of-type(3) {
+      --transform-to:
+        translateX(-40%)
+        translateY(12%)
+        rotate(8deg);
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .cards-container {
+    & .card-wrapper:nth-of-type(1) {
+      --transform-to:
+        translateX(0%)
+        translateY(0%)
+        rotate(0deg);
+    }
+
+    & .card-wrapper:nth-of-type(3) {
+      --transform-to:
+        translateX(0%)
+        translateY(0%)
+        rotate(0deg);
+    }
+  }
+}
+
+@keyframes plansSplit {
+    from {
+      transform: var(--transform-from);
+    }
+    to {
+      transform: var(--transform-to);
+    }
+}
+
+
+
+/* card hover animation */
+
+.card-wrapper { 
+  & .card {
+    transition: 
+      transform 0.2s linear,
+      box-shadow 0.5s ease;
+  }
+
+  & .bunny {
+    transition: 
+      transform 0.5s ease-out,
+      filter 0.5s ease;
+  }
+
+  & .decoration img{
+    transition: 
+      transform 0.5s ease;
+  }
+}
+
+.card-wrapper:has(.card:hover) { 
+  z-index: 4;
+
+  & .card {
+    transform: translateY(-3%);
+    box-shadow:
+      0 0 24px rgba(115, 182, 210, 0.05),
+      0 0 36px rgba(115, 182, 210, 0.04),
+      0 0 48px rgba(115, 182, 210, 0.03),
+      0 0 64px rgba(115, 182, 210, 0.02);
+  }
+
+  & .bunny {
+    transform: translateY(-55%);
+    filter:
+      drop-shadow(0 0 16px rgba(115, 182, 210, 0.05))
+      drop-shadow(0 0 24px rgba(115, 182, 210, 0.04))
+      drop-shadow(0 0 32px rgba(115, 182, 210, 0.03))
+      drop-shadow(0 0 40px rgba(115, 182, 210, 0.02));  
+
+
+    transition: 
+      transform 0.3s 0.3s ease-in,
+      filter 0.5s ease;
+  }
+
+  & .stars-top img, .stars-bottom img {
+    filter:
+      drop-shadow(0 0 8px rgba(167, 97, 190, 0.05))
+      drop-shadow(0 0 16px rgba(167, 97, 190, 0.1))
+      drop-shadow(0 0 24px rgba(167, 97, 190, 0.7)) 
+  }
+
+  & .stars-top img:nth-child(1){
+    transform: rotate(-15deg);
+  }
+  & .stars-top img:nth-child(2){
+    transform: rotate(15deg);
+  }
+
+  & .stars-bottom img:nth-child(1){
+    transform: rotate(15deg);
+  }
+  & .stars-bottom img:nth-child(2){
+    transform: rotate(-15deg);
+  }
+}
+
+@media (width <= 768px) {
+
+  /* cards roll left/right on hover */
+ 
+  #plans .cards-container{
+    padding-inline: 0px;
+    width: 283px;
+    margin-inline:auto;
+    gap: 1rem;
+
+    --scroll-to: translateX(19rem);
+
+    & .card-wrapper {
+      
+      animation: cardScroll 0.5s Ease forwards;
+    }
+
+    & .card-wrapper:has(.card:hover) {
+      &:nth-last-of-type(1) {
+        --scroll-to: translateX(19rem);
+      }
+
+      &:nth-last-of-type(2) {
+        --scroll-to: translateX(0rem);
+      }
+
+      &:nth-last-of-type(3) {
+        --scroll-to: translateX(-19rem);
+      }
+    }
+  }
+
+  @keyframes cardScroll{
+    to {
+      transform: var(--scroll-to);
+    }
+  }
+}
