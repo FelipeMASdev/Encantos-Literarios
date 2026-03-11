@@ -1,0 +1,140 @@
+footer {
+
+  width: 100%;
+  aspect-ratio: 1440/415;
+
+  background: url(../assets/footer/book-trace-background.png) center/contain no-repeat;
+
+  & .footer-wrapper {
+    width: 100%;
+    padding-inline: 11%;
+    padding-top: 1vw;
+    justify-content: space-between;
+  }
+
+  & .socials-wrapper {
+    flex-direction: column;
+    gap:1.5rem;
+    
+    & div:first-child img {
+      width: 16.5rem;
+      height: auto;
+    }
+
+    & .flex {
+      justify-content: space-between;
+
+      & a {
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        display: flex;
+        justify-content: center;
+
+        & img {
+          filter: brightness(0) saturate(100%) invert(77%) sepia(17%) saturate(1012%) hue-rotate(158deg) brightness(88%) contrast(86%);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+
+          border-radius: 50%;
+          background-color: var(--shape-stroke);
+
+          opacity: 0;
+          transition: opacity .3s ease;
+        }
+      }
+
+      & a:hover { 
+        &::before {
+          opacity: 1;
+        }
+
+        & img {
+          filter: none;
+        }
+      }
+
+      & a img {
+        width: 1.5rem;
+        height: 1.5rem;
+        align-self: center;
+      }
+    }
+  }
+
+  & nav {
+    gap: 3.5rem;
+
+    & > div {
+      flex-direction: column;
+    }
+
+    & span {
+      margin-bottom: 1.25rem;
+      font: var(--font-title-xs);
+      color: var(--text-body);
+    }
+
+    & a{
+      font: var(--font-link);
+      color: var(--blue-light);
+    }
+
+    & a:hover, a:focus{
+      font: var(--font-link);
+      color: var(--text-body);
+    }
+
+
+    & a:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+  }
+
+}
+
+@media (768px <=  width <= 880px) {
+  footer {
+    & .footer-wrapper {
+      padding-inline: 5%;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  footer {
+    background: url(../assets/footer/book-trace-background.png) center/cover no-repeat;
+    padding-block: 3.5rem 2.375rem;
+
+    & .footer-wrapper {
+      padding-inline: 2rem;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    & .socials-wrapper {
+      width: 100%;
+      & div:first-child img {
+        display: block;
+        margin-inline: auto;
+        width: 10rem;
+      }
+    }
+
+    & nav {
+      justify-content: space-between;
+      width: 100%;
+      gap:1.5rem;
+
+      & >div {
+        width: calc((100% - 2rem) / 2);
+      }
+    }
+  }
+}
