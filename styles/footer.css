@@ -49,7 +49,7 @@ footer {
         }
       }
 
-      & a:hover { 
+      & a:hover, & a:focus { 
         &::before {
           opacity: 1;
         }
@@ -75,7 +75,7 @@ footer {
     }
 
     & span {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
       font: var(--font-title-xs);
       color: var(--text-body);
     }
@@ -92,7 +92,7 @@ footer {
 
 
     & a:not(:last-child) {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
     }
 
   }

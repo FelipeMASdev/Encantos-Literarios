@@ -23,7 +23,7 @@
   }
 }
 
-.ah-button:hover{
+.ah-button:hover, .ah-button:focus{
   &::before{
     content:"";
     position: absolute;

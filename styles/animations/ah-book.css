@@ -1,4 +1,4 @@
-  & .book-wrapper .book:hover {
+  .book-wrapper .book:hover, .book-wrapper .book:focus {
 
     & img:not([src*="book.png"]), & div {
       scale: 1.0;

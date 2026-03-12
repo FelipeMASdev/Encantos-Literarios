@@ -107,11 +107,12 @@
 
 /* card hover animation */
 
-.card-wrapper { 
+#plans .card-wrapper { 
   & .card {
     transition: 
       transform 0.2s linear,
-      box-shadow 0.5s ease;
+      box-shadow 0.5s ease,
+      background-color 0.2s linear;
   }
 
   & .bunny {
@@ -126,10 +127,11 @@
   }
 }
 
-.card-wrapper:has(.card:hover) { 
+#plans .card-wrapper:has(.card:hover), #plans .card-wrapper:has(.card:focus), #plans .card-wrapper:has(.button:focus) { 
   z-index: 4;
 
   & .card {
+    background-color: var(--shape-hover);
     transform: translateY(-3%);
     box-shadow:
       0 0 24px rgba(115, 182, 210, 0.05),
@@ -184,7 +186,7 @@
     padding-inline: 0;
     width: 18rem;
 
-    gap: 1rem;
+    gap: .5rem;
 
     --step: 19rem;
     --shift: 0;
@@ -194,6 +196,7 @@
 
     & .card-wrapper {
       animation: none;
+
     }
   }
 }
